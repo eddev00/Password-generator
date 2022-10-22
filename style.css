@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #4285f4;
+}
+.container {
+  width: 450px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.container h2 {
+  font-weight: 600;
+  font-size: 1.31rem;
+  padding: 1rem 1.175rem;
+  border-bottom: 1px solid #d4dbe5;
+}
+
+.wrapper {
+  margin: 1.25rem 1.75rem;
+}
+.wrapper .input-box {
+  position: relative;
+}
+.input-box input {
+  width: 100%;
+  height: 53px;
+  font-size: 1.06rem;
+  font-weight: 500;
+  border: 1px solide #aaa;
+  border-radius: 4px;
+  letter-spacing: 1.4px;
+  padding: 0 2.85rem 0 1rem;
+  color: #000;
+}
+
+.input-box span {
+  position: absolute;
+  right: 13px;
+  line-height: 53px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.wrapper .pass-indicator {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #dfdfdf;
+}
+.pass-indicator::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 50%;
+  border-radius: inherit;
+  background: #f1c80b;
+  transition: width 0.3s ease;
+}
+.pass-indicator#weak::before {
+  background: #e64a4a;
+  width: 20%;
+}
+.pass-indicator#meduim::before {
+  background: #f1c80b;
+  width: 50%;
+}
+.pass-indicator#strong::before {
+  width: 100%;
+  background: #4285f4;
+}
+.wrapper .pass-length {
+  margin: 1.56rem 0 1.25rem;
+}
+.pass-length .details {
+  display: flex;
+  justify-content: space-between;
+}
+.pass-length input {
+  width: 100%;
+  height: 5px;
+}
+
+.pass-settings .options {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.pass-settings .options .option {
+  display: flex;
+  margin-bottom: 1rem;
+  width: calc(100% / 2);
+  align-items: center;
+}
+.options .option:first-child {
+  pointer-events: none;
+}
+.options .option:first-child input {
+  opacity: 0.7;
+}
+.options .option input {
+  height: 16px;
+  width: 16px;
+  cursor: pointer;
+}
+.options .option label {
+  cursor: pointer;
+  padding-left: 0.63rem;
+}
+
+.wrapper .generate-btn {
+  width: 100%;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.06rem;
+  padding: 0.94rem 0;
+  margin: 0.94rem 0 1.3rem;
+  background: #4285f4;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
